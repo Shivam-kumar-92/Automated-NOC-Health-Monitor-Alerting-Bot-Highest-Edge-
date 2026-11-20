@@ -67,6 +67,7 @@ class TestICMPParser(unittest.TestCase):
 class TestTCPProbe(unittest.TestCase):
     def test_open_and_closed_port(self) -> None:
         srv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         srv.bind(("127.0.0.1", 0))
         srv.listen(1)
         open_port = srv.getsockname()[1]
@@ -85,10 +86,15 @@ class TestTCPProbe(unittest.TestCase):
             self.assertTrue(open_res.is_open)
             self.assertIsNotNone(open_res.latency_ms)
         finally:
+            t.join(timeout=2.0)
             srv.close()
 
-        # Now that socket is closed, port should report closed
-        closed_res = check_tcp_port("127.0.0.1", open_port, timeout_seconds=1.0)
+        # Bind and immediately release an ephemeral non-listening socket to get a guaranteed closed port
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as unused_sock:
+            unused_sock.bind(("127.0.0.1", 0))
+            closed_port = unused_sock.getsockname()[1]
+
+        closed_res = check_tcp_port("127.0.0.1", closed_port, timeout_seconds=1.0)
         self.assertFalse(closed_res.is_open)
         self.assertIsNotNone(closed_res.error)
 
