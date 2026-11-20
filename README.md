@@ -1,5 +1,9 @@
 # Automated NOC Health Monitor & Alerting Bot
 
+[![CI](https://github.com/Shivam-kumar-92/Automated-NOC-Health-Monitor-Alerting-Bot-Highest-Edge-/actions/workflows/ci.yml/badge.svg)](https://github.com/Shivam-kumar-92/Automated-NOC-Health-Monitor-Alerting-Bot-Highest-Edge-/actions/workflows/ci.yml)
+![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)
+![Dependencies](https://img.shields.io/badge/dependencies-zero%20(stdlib)-brightgreen)
+
 A lightweight, **zero-dependency** Python network monitoring and SLA tracking daemon built for Linux VMs, AWS EC2 instances, and local workstations. It continuously probes critical network endpoints using **ICMP ping** and **TCP port checks (`22`, `53`, `80`, `443`, and custom ports)**, tracks uptime/downtime in **SQLite + automatically rotating CSV logs**, serves an optional **live NOC web dashboard**, and fires instant **Discord, Slack, and Telegram webhook alerts** on outage, latency spikes, packet loss, and recovery.
 
 ---
