@@ -1,0 +1,13 @@
+# Runtime data & rotated logs
+data/
+logs/
+
+# Secrets
+.env
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/

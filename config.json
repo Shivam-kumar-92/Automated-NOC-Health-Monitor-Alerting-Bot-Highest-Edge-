@@ -1,0 +1,60 @@
+{
+  "poll_interval_seconds": 30,
+  "icmp_count": 3,
+  "icmp_timeout_seconds": 2.0,
+  "tcp_timeout_seconds": 3.0,
+  "max_workers": 10,
+  "thresholds": {
+    "latency_warning_ms": 120.0,
+    "latency_critical_ms": 250.0,
+    "packet_loss_threshold_pct": 20.0,
+    "consecutive_failures": 2
+  },
+  "alerts": {
+    "discord_webhook_url": "",
+    "slack_webhook_url": "",
+    "telegram_bot_token": "",
+    "telegram_chat_id": "",
+    "notify_on_degraded": true,
+    "request_timeout_seconds": 8.0
+  },
+  "storage": {
+    "sqlite_path": "data/sla_metrics.db",
+    "csv_log_path": "logs/sla_events.csv",
+    "csv_max_bytes": 5242880,
+    "csv_backup_count": 5,
+    "app_log_path": "logs/noc_monitor.log",
+    "app_log_max_bytes": 5242880,
+    "app_log_backup_count": 5
+  },
+  "targets": [
+    {
+      "name": "Cloudflare-DNS",
+      "host": "1.1.1.1",
+      "role": "public-dns",
+      "check_icmp": true,
+      "tcp_ports": [53, 80, 443]
+    },
+    {
+      "name": "Google-DNS",
+      "host": "8.8.8.8",
+      "role": "public-dns",
+      "check_icmp": true,
+      "tcp_ports": [53, 443]
+    },
+    {
+      "name": "GitHub-Edge",
+      "host": "github.com",
+      "role": "web-and-ssh",
+      "check_icmp": true,
+      "tcp_ports": [22, 80, 443]
+    },
+    {
+      "name": "Quad9-DNS",
+      "host": "9.9.9.9",
+      "role": "backup-dns",
+      "check_icmp": true,
+      "tcp_ports": [53, 443]
+    }
+  ]
+}
