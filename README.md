@@ -6,6 +6,8 @@
 
 A lightweight, **zero-dependency** Python network monitoring and SLA tracking daemon built for Linux VMs, AWS EC2 instances, and local workstations. It continuously probes critical network endpoints using **ICMP ping** and **TCP port checks (`22`, `53`, `80`, `443`, and custom ports)**, tracks uptime/downtime in **SQLite + automatically rotating CSV logs**, serves an optional **live NOC web dashboard**, and fires instant **Discord, Slack, and Telegram webhook alerts** on outage, latency spikes, packet loss, and recovery.
 
+![NOC Live Dashboard Preview](docs/dashboard-preview.svg)
+
 ---
 
 ## Architecture

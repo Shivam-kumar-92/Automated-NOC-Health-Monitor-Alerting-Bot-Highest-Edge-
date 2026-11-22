@@ -1,0 +1,105 @@
+<svg width="1100" height="460" viewBox="0 0 1100 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="460" rx="14" fill="#0B1120" stroke="#1F2937" stroke-width="1.5"/>
+  <!-- Window Header -->
+  <rect x="0" y="0" width="1100" height="40" rx="14" fill="#111827"/>
+  <rect x="0" y="26" width="1100" height="14" fill="#111827"/>
+  <circle cx="22" cy="20" r="5.5" fill="#EF4444"/>
+  <circle cx="40" cy="20" r="5.5" fill="#F59E0B"/>
+  <circle cx="58" cy="20" r="5.5" fill="#22C55E"/>
+  <text x="550" y="24" text-anchor="middle" fill="#9CA3AF" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12">http://127.0.0.1:8080 — NOC Network Health &amp; SLA Dashboard</text>
+
+  <!-- Title & Live Pill -->
+  <text x="28" y="74" fill="#F8FAFC" font-family="-apple-system, Segoe UI, sans-serif" font-size="18" font-weight="700">NOC NETWORK HEALTH &amp; SLA MONITOR</text>
+  <text x="28" y="93" fill="#9CA3AF" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11">Real-time ICMP Ping, TCP Ports (22/53/80/443), Packet Loss &amp; Incident Tracking</text>
+  <rect x="905" y="56" width="168" height="28" rx="14" fill="#052E16" stroke="#22C55E" stroke-opacity="0.5"/>
+  <circle cx="922" cy="70" r="4" fill="#22C55E"/>
+  <text x="934" y="74" fill="#86EFAC" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" font-weight="700">Live · 5s Auto-Refresh</text>
+
+  <!-- KPI Strip -->
+  <g font-family="ui-monospace, Menlo, Consolas, monospace">
+    <rect x="28" y="112" width="164" height="62" rx="8" fill="#111827" stroke="#1F2937"/>
+    <text x="42" y="132" fill="#9CA3AF" font-size="10">MONITORED HOSTS</text>
+    <text x="42" y="160" fill="#F8FAFC" font-size="22" font-weight="700">4</text>
+
+    <rect x="204" y="112" width="164" height="62" rx="8" fill="#111827" stroke="#1F2937"/>
+    <text x="218" y="132" fill="#9CA3AF" font-size="10">HEALTHY (UP)</text>
+    <text x="218" y="160" fill="#22C55E" font-size="22" font-weight="700">3</text>
+
+    <rect x="380" y="112" width="164" height="62" rx="8" fill="#111827" stroke="#1F2937"/>
+    <text x="394" y="132" fill="#9CA3AF" font-size="10">DEGRADED</text>
+    <text x="394" y="160" fill="#F59E0B" font-size="22" font-weight="700">1</text>
+
+    <rect x="556" y="112" width="164" height="62" rx="8" fill="#111827" stroke="#1F2937"/>
+    <text x="570" y="132" fill="#9CA3AF" font-size="10">CRITICAL (DOWN)</text>
+    <text x="570" y="160" fill="#EF4444" font-size="22" font-weight="700">0</text>
+
+    <rect x="732" y="112" width="164" height="62" rx="8" fill="#111827" stroke="#1F2937"/>
+    <text x="746" y="132" fill="#9CA3AF" font-size="10">FLEET SLA</text>
+    <text x="746" y="160" fill="#38BDF8" font-size="22" font-weight="700">99.98%</text>
+
+    <rect x="908" y="112" width="165" height="62" rx="8" fill="#111827" stroke="#1F2937"/>
+    <text x="922" y="132" fill="#9CA3AF" font-size="10">OPEN INCIDENTS</text>
+    <text x="922" y="160" fill="#22C55E" font-size="22" font-weight="700">0</text>
+  </g>
+
+  <!-- Live Telemetry Table -->
+  <rect x="28" y="190" width="1045" height="170" rx="10" fill="#111827" stroke="#1F2937"/>
+  <text x="44" y="214" fill="#F1F5F9" font-family="-apple-system, Segoe UI, sans-serif" font-size="13" font-weight="700">Live Endpoint Telemetry</text>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11">
+    <text x="44" y="238" fill="#9CA3AF">ENDPOINT</text>
+    <text x="215" y="238" fill="#9CA3AF">HOST / IP</text>
+    <text x="360" y="238" fill="#9CA3AF">STATUS</text>
+    <text x="465" y="238" fill="#9CA3AF">ICMP RTT</text>
+    <text x="555" y="238" fill="#9CA3AF">LOSS</text>
+    <text x="625" y="238" fill="#9CA3AF">TCP PORTS</text>
+    <text x="895" y="238" fill="#9CA3AF">DIAGNOSTICS</text>
+    <line x1="40" y1="246" x2="1060" y2="246" stroke="#1F2937"/>
+
+    <!-- Row 1 -->
+    <text x="44" y="268" fill="#F8FAFC" font-weight="700">Cloudflare-DNS</text>
+    <text x="215" y="268" fill="#38BDF8">1.1.1.1</text>
+    <rect x="358" y="255" width="44" height="18" rx="9" fill="#052E16" stroke="#22C55E" stroke-opacity="0.5"/>
+    <text x="380" y="268" text-anchor="middle" fill="#22C55E" font-size="10" font-weight="700">UP</text>
+    <text x="465" y="268" fill="#E5E7EB">12.0 ms</text>
+    <text x="555" y="268" fill="#E5E7EB">0.0%</text>
+    <text x="625" y="268" fill="#86EFAC">53/DNS · 80/HTTP · 443/HTTPS</text>
+    <text x="895" y="268" fill="#9CA3AF">Healthy</text>
+
+    <!-- Row 2 -->
+    <text x="44" y="294" fill="#F8FAFC" font-weight="700">Google-DNS</text>
+    <text x="215" y="294" fill="#38BDF8">8.8.8.8</text>
+    <rect x="358" y="281" width="44" height="18" rx="9" fill="#052E16" stroke="#22C55E" stroke-opacity="0.5"/>
+    <text x="380" y="294" text-anchor="middle" fill="#22C55E" font-size="10" font-weight="700">UP</text>
+    <text x="465" y="294" fill="#E5E7EB">20.0 ms</text>
+    <text x="555" y="294" fill="#E5E7EB">0.0%</text>
+    <text x="625" y="294" fill="#86EFAC">53/DNS · 443/HTTPS</text>
+    <text x="895" y="294" fill="#9CA3AF">Healthy</text>
+
+    <!-- Row 3 -->
+    <text x="44" y="320" fill="#F8FAFC" font-weight="700">GitHub-Edge</text>
+    <text x="215" y="320" fill="#38BDF8">github.com</text>
+    <rect x="358" y="307" width="44" height="18" rx="9" fill="#052E16" stroke="#22C55E" stroke-opacity="0.5"/>
+    <text x="380" y="320" text-anchor="middle" fill="#22C55E" font-size="10" font-weight="700">UP</text>
+    <text x="465" y="320" fill="#E5E7EB">33.0 ms</text>
+    <text x="555" y="320" fill="#E5E7EB">0.0%</text>
+    <text x="625" y="320" fill="#86EFAC">22/SSH · 80/HTTP · 443/HTTPS</text>
+    <text x="895" y="320" fill="#9CA3AF">Healthy</text>
+
+    <!-- Row 4 -->
+    <text x="44" y="346" fill="#F8FAFC" font-weight="700">Quad9-DNS</text>
+    <text x="215" y="346" fill="#38BDF8">9.9.9.9</text>
+    <rect x="358" y="333" width="76" height="18" rx="9" fill="#451A03" stroke="#F59E0B" stroke-opacity="0.6"/>
+    <text x="396" y="346" text-anchor="middle" fill="#F59E0B" font-size="10" font-weight="700">DEGRADED</text>
+    <text x="465" y="346" fill="#F59E0B">148.0 ms</text>
+    <text x="555" y="346" fill="#E5E7EB">0.0%</text>
+    <text x="625" y="346" fill="#86EFAC">53/DNS · 443/HTTPS</text>
+    <text x="895" y="346" fill="#FBBF24">Latency &gt;= 120ms</text>
+  </g>
+
+  <!-- Webhook & Incident Bar -->
+  <rect x="28" y="374" width="1045" height="66" rx="10" fill="#111827" stroke="#1F2937"/>
+  <text x="44" y="397" fill="#F1F5F9" font-family="-apple-system, Segoe UI, sans-serif" font-size="13" font-weight="700">Recent Incident &amp; Webhook Recovery Log</text>
+  <rect x="44" y="408" width="76" height="19" rx="9" fill="#052E16" stroke="#22C55E" stroke-opacity="0.5"/>
+  <text x="82" y="421" text-anchor="middle" fill="#22C55E" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" font-weight="700">RESOLVED</text>
+  <text x="132" y="421" fill="#E5E7EB" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11">#1 Edge-Firewall-Demo (198.51.100.10) · Down: 2s · Alerted Discord/Slack/Telegram (DOWN + RECOVERY)</text>
+</svg>
